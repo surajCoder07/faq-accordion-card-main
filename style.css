@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+:root{
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+h3{
+    color: var(--Dark-grayish-blue);
+}
+
+.container-fluid{
+    background: linear-gradient(var(--Soft-violet ) , var(--Soft-blue));
+    min-height: 100vh;
+
+}
+.row{
+    margin: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: var(--Light-grayish-blue);
+    z-index: 10;
+
+}
+.arrow{
+    align-self: center;
+    margin-left: 1rem;
+}
+.click .arrow{
+    transform: rotate(180deg);
+}
+.click h3{
+    font-weight:bold;
+    color: black;
+
+}
+
+.answers{
+    height: 0rem;
+    overflow: hidden;
+}
+.ans{
+    height: fit-content;
+    
+}
+p{
+    font-size: 1.3rem;
+}
+.content>div{
+    margin: 2rem 0;
+}
+.divider{
+    border: none;
+}
+#img1{
+    position:absolute;
+    bottom: 64px;
+    left: -111px;
+    z-index: 10;
+}
+#img2{
+    position:relative;
+    left: -70px;
+}
+.img-box{
+    position: relative;
+    padding: 2rem;
+    background: url(images/bg-pattern-desktop.svg) center no-repeat  ;
+    background-size: 45rem 47rem;
+}
+.question{
+    cursor: pointer;
+}
+.question h3{
+    font-weight: 600;
+}
+.question h3:hover{
+    color: var(--Soft-red);
+}
+#imgg{
+    display: none;
+}
+.content h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+@media screen and (max-width:991px) {
+    
+    .row{
+        flex-direction: column;
+        
+    }
+    #img1{
+        position:absolute;
+        bottom: 64px;
+        left: -111px;
+        z-index: 10;
+    }
+    #img2{
+        position:relative;
+        left: -70px;
+    }
+    .content h1{
+        text-align: center;
+    }
+} 
+@media screen and (max-width:545px) {
+    html{
+        font-size: 50%;
+    }
+    
+    #img1,#img2{
+        display: none;
+
+    }
+
+    #imgg{
+        display: block;
+        position: relative;
+        bottom: 80px;
+    }
+    .img-box{
+        position: relative;
+        height: 15rem;
+        margin-bottom: rem;
+
+         background: url(images/bg-pattern-mobile.svg) none;
+        background-size: 30rem 20rem;
+        background-position: top;
+    } 
+    .content{
+        margin-top: 2rem;
+    }
+    
+}
